@@ -18,13 +18,13 @@ if (preg_match('/\/start/', $text)) {
     return;
 }
 
-if (preg_match('/[a-zA-Zа-�^��^�-Я\[\]\{\}]+/', $text)) {
+if (preg_match('/[a-zA-Zа-яА-Я\[\]\{\}]+/', $text)) {
     $message = 'Enter the expression correctly. For example "3+5"';
     $bot->sendMessage($chatId, $message);
     return;
 }
 
-$text = preg_replace('/[\s!?:�^��_=]+/', '', $text);
+$text = preg_replace('/[\s!?:…_=]+/', '', $text);
 eval('$result = '.$text.';');
 
 $bot->sendMessage($chatId, $result);
