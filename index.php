@@ -2,7 +2,7 @@
 
 require_once __DIR__ . '/vendor/autoload.php';
 
-$bot = new \TelegramBot\Api\BotApi('316747810:AAFhNhL5dhAkDHmj0b7fkCl6zxiTe2hj6hU');
+$bot = new \TelegramBot\Api\BotApi('319298421:AAG9vFOzSdBnK__IDHcdU5okX9bfMsF4OOM');
 
 $response = file_get_contents('php://input');
 $update = json_decode($response, true);
